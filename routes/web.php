@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/{any}', function () {
-    return view('welcome');
+    return redirect('/admin/login');
 })->where('any', '.*');
+
+Route::get('/admin', 'DashboardController@getIndex');
