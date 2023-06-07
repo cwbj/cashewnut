@@ -3,6 +3,43 @@
 @section('content')
 <!-- Your custom  HTML goes here -->
 <div class="row mb-20">
+    <div class="col-md-3 card mb-3 text-center">
+        <a href="{{ url('/admin/works') }}">
+            <div class="card-body bg-light sd">
+                <h5 class="card-title">Today's Works (Peeling)</h5>
+                <span class="angka">{{ number_format($notes_count) }}</span>
+                <p>Units</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 card mb-3 text-center">
+        <a href="{{ url('/admin/works') }}">
+            <div class="card-body bg-light smp">
+                <h5 class="card-title">Today's Works (Cleaning)</h5>
+                <span class="angka">{{ number_format(0) }}</span>
+                <p>Units</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-3 card mb-3 text-center">
+        <a href="{{ url('/admin/works') }}">
+            <div class="card-body bg-light sd">
+                <h5 class="card-title">Today's Amounts</h5>
+                <span class="angka">{{ number_format($notes_count) }}</span>
+                <p>grams (g)</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3 card mb-3 text-center">
+        <a href="{{ url('/admin/students') }}">
+            <div class="card-body bg-light smp">
+                <h5 class="card-title">Students</h5>
+                <span class="angka">{{ number_format($participants_count) }}</span>
+                <p>People</p>
+            </div>
+        </a>
+    </div>
 
     <div class="col-md-4 card mb-3">
         <div class="card mb-20">
@@ -21,27 +58,7 @@
 
                 <!-- ---------- -->
                 <hr>
-                <div class="row">
-                    <div class="col-md-12 card mb-3 text-center">
-                        <a href="{{ url('/admin/notes') }}">
-                            <div class="card-body bg-light sd">
-                                <h5 class="card-title">Works</h5>
-                                <span class="angka">{{ number_format($notes_count) }}</span>
-                                <p>Items</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-12 card mb-3 text-center">
-                        <a href="{{ url('/admin/participants') }}">
-                            <div class="card-body bg-light smp">
-                                <h5 class="card-title">Students</h5>
-                                <span class="angka">{{ number_format($participants_count) }}</span>
-                                <p>People</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
             
         </div>
@@ -66,6 +83,7 @@
         </div>
         <!-- /.box -->
     </div>
+    <!-- .col-md-8 -->
 
 </div>
 <!-- ADD A PAGINATION -->
